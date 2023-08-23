@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class ScoreJoueur
+{
+    String nom_du_joueur;
+    float score;
+    float score_maximal;
+
+            ScoreJoueur(String nom_du_joueur, float score,float score_maximal )
+            {
+           
+                this.nom_du_joueur = nom_du_joueur;
+                this.score =score;
+                this.score_maximal =score_maximal;
+              
+            }
+           
+
+    double Afficher( )
+    {
+        return  2*(this.longueur+this.largeur) ;
+    }
+   
+    
+   
+     public static void main(String[] args)     
+    {
+        
+       Rectangle A= new Rectangle(1,2);
+               
+
+        double surface =A.Surface();
+        double perimetre =A.Perimetre();
+        System.out.println("surface=" + surface+ "perimetre=" + perimetre); 
+            
+
+    }
+
+}
