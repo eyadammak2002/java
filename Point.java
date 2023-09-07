@@ -2,9 +2,11 @@ class Point
 {
     int x;
     int y;
+
             Point(int x, int y )
             {
                 this.x = x != 0 ? x : 1;
+                
                 this.y = y != 0 ? y : 1;
             }
             Point()
@@ -26,7 +28,7 @@ class Point
 
     void Afficher()
     {
-       System.out.println("x=" + this.x+"  y="+ this.y );   
+       System.out.println("x=" + this.x + "  y=" + this.y );   
     }
     void deplacer(int a,int b)
     {
@@ -49,6 +51,7 @@ class Point
                 B.Afficher();
                 C.Afficher();
                 D.Afficher();
+                
 
     }
 

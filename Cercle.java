@@ -30,11 +30,11 @@ class Cercle
      public static void main(String[] args)     
     {
         
-        Cercle C=new Cercle(2,3,4);
+        Cercle cercle=new Cercle(2,3,4);
         
-        C.Afficher();
-        C.o.deplacer(1,4);
-        C.Afficher();
+        cercle.Afficher();
+        cercle.o.deplacer(1,4);
+        cercle.Afficher();
    
 
          

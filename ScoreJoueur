@@ -3,30 +3,38 @@ import java.util.Scanner;
 class ScoreJoueur
 {
     String nom_du_joueur;
-    float score;
-    float score_maximal;
+    int score;
+    int score_maximal;
 
-            ScoreJoueur(String nom_du_joueur, float score,float score_maximal )
-            {
-           
-                this.nom_du_joueur = nom_du_joueur;
-                this.score =score;
-                this.score_maximal =score_maximal;
-              
-            }
-           
-
-    double Afficher( )
+    ScoreJoueur( )
     {
-        return  2*(this.longueur+this.largeur) ;
+        Scanner ScJo = new Scanner (System.in);
+        System.out.println("entrer le longueur :"); 
+        this.nom_du_joueur= ScJo.nextLine();
+        System.out.println("entrer le largeur :"); 
+        this.score= ScJo.nextInt();
+        System.out.println("entrer le largeur :"); 
+        this.score_maximal= ScJo.nextInt();
+
+       
+              
     }
-   
+           
+
+    void Afficher( )
+    {
+        System.out.println("nom joueur: "+this.nom_du_joueur+"\nscore: "+this.score+"\nscore maximal"+score_maximal) ;
+    }
+    
+    void Ajouter(int n){
+        this.score+=n; 
+    }
     
    
      public static void main(String[] args)     
     {
         
-       Rectangle A= new Rectangle(1,2);
+        ScoreJoueur scoreJoueur= new ScoreJoueur();
                
 
         double surface =A.Surface();

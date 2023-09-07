@@ -40,10 +40,8 @@ class Date
     }
 
     int diffDate(Date d )
-    { int res;
-      
-       
-    res=d.jours-this.jours;
+    {   int res;
+        res=Math.abs(((this.jours-d.jours-1)*365)+(((this.mois-1)+(12-d.mois))*30)+(this.jours-d.jours));
     return res;
     }
     
