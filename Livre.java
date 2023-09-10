@@ -54,7 +54,7 @@ class Livre
 
      void Afficher()
     {
-        System.out.println("livre /n code  " + this.code + "/n titre = " + this.titre+ "/n auteur = " + this.auteur+ " /n prix = " + this.prix );   
+        System.out.println("livre \n code  " + this.code + "\n titre = " + this.titre+ "\n auteur = " + this.auteur+ " \n prix = " + this.prix );   
 
     }
 

@@ -1,7 +1,7 @@
 class Point
 {
-    int x;
-    int y;
+    protected int x;
+    protected int y;
 
             Point(int x, int y )
             {
@@ -34,6 +34,10 @@ class Point
     {
         this.x += a;
         this.y +=b;    
+    }
+
+    public static void test(){
+        System.out.println("test static" );  
     }
    
      public static void main(String[] args)     

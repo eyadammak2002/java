@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class gestion_bibliotheque {
 
@@ -10,50 +11,56 @@ public class gestion_bibliotheque {
             myLivres = new Livre[10];
         }
 
-    void Ajouter(){
-                Scanner li = new Scanner (System.in);
+    void Ajouter()throws Exception{
+                BufferedReader br = new BufferedReader(
+                new InputStreamReader(System.in));
+               // Taking integer input
+   
                 System.out.println("entrer le code :"); 
-                int code=li.nextInt();
+                int code = Integer.parseInt(br.readLine());
+                // Taking string input
                 System.out.println("entrer le titre :"); 
-                String titre=li.nextLine();
-
+                String titre = br.readLine();
                 System.out.println("entrer le auteur :"); 
-                String auteur=li.nextLine();
+                String auteur=br.readLine();
+                // Taking float input
                 System.out.println("entrer le prix :"); 
-                float prix=li.nextFloat();
+                float prix=Float.parseFloat(br.readLine());
 
             this.myLivres[nbLivre]=new Livre(code,titre,auteur,prix);
             nbLivre++;
 
     }
 
-    void Modifier(){
+    void Modifier()throws Exception{
                 int i=0;
-                Scanner co = new Scanner (System.in);
+                BufferedReader br = new BufferedReader(
+                new InputStreamReader(System.in));
                 System.out.println("donner le code :"); 
-                int code=co.nextInt();
+                int code = Integer.parseInt(br.readLine());
             //getcode 5ater il code private 5asa bil class livre
                 while ((code != this.myLivres[i].getcode())&&(i<nbLivre)){
                     i++;
                     if(i<nbLivre){
                             
                         System.out.println("donner le nouveau titre :"); 
-                        this.myLivres[i].settitre(co.nextLine());
+                        this.myLivres[i].settitre(br.readLine());
                         System.out.println("donner le nouveau auteur :"); 
-                        this.myLivres[i].setauteur(co.nextLine());
+                        this.myLivres[i].setauteur(br.readLine());
                         System.out.println("donner le nouveau prix :"); 
-                        this.myLivres[i].setprix(co.nextFloat());
+                        this.myLivres[i].setprix(Float.parseFloat(br.readLine()));
                         }
                     else
                     System.out.println("code n'existe pas" );     
                 }              
     }
 
-    void Supprimer(){
+    void Supprimer()throws Exception{
            int i=0;
-           Scanner co = new Scanner (System.in);
+           BufferedReader br = new BufferedReader(
+           new InputStreamReader(System.in));
            System.out.println("donner le code :"); 
-           int code=co.nextInt();
+           int code = Integer.parseInt(br.readLine());
 
         while ((code != this.myLivres[i].getcode())&&(i<nbLivre)){
             i++;
@@ -73,11 +80,12 @@ public class gestion_bibliotheque {
        myLivres[i].Afficher(); 
     }
 
-    void afficherLivre(){
+    void afficherLivre()throws Exception{
          int i=0;
-                Scanner co = new Scanner (System.in);
+                 BufferedReader br = new BufferedReader(
+           new InputStreamReader(System.in));
                 System.out.println("donner le code :"); 
-                int code=co.nextInt();
+                int code = Integer.parseInt(br.readLine());
             //getcode 5ater il code private 5asa bil class livre
                 while ((code != this.myLivres[i].getcode())&&(i<nbLivre)){
                     i++;
@@ -87,7 +95,7 @@ public class gestion_bibliotheque {
                     System.out.println("code n'existe pas" );     
                 }  
     }
-    void menu(){
+    void menu()throws Exception{
 
     int choix;
     do{
@@ -103,8 +111,9 @@ public class gestion_bibliotheque {
             System.out.println("donner le choix" ); 
 
 
-            Scanner co = new Scanner (System.in);
-            choix=co.nextInt();
+            BufferedReader br = new BufferedReader(
+           new InputStreamReader(System.in));
+            choix=Integer.parseInt(br.readLine());
             
             switch (choix) {
                 case 1:
@@ -130,7 +139,7 @@ public class gestion_bibliotheque {
         } while(choix!=6);
     }
 
-    public static void main(String[] args)     
+    public static void main(String[] args)throws Exception     
     {
         gestion_bibliotheque a =new gestion_bibliotheque();
         a.menu();
