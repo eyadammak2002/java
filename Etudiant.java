@@ -2,68 +2,78 @@
 
 class Etudiant
 {
+    // attributs
     int numero_identification;
     String nom;
     String prenom;
+    String branche;
     int niveau;
-        Etudiant(int numero_identification, String nom, String prenom,int niveau)
+        // constructeur
+
+        Etudiant(int numero_identification, String nom,String branche, String prenom,int niveau)
             {
                 this.numero_identification=numero_identification;
                 this.nom=nom;
                 this.prenom=prenom;
                 this.niveau=niveau;
+                this.branche=branche;
             }
            
 
-         void Afficher()
+         
+        // getter and sette
+
+        int getnumero_identification()
+        {
+            return numero_identification;
+        }
+        void setnumero_identification(int numero_identification)
+        {
+            this.numero_identification=numero_identification;
+        }
+        String getnom()
+        {
+            return nom;
+        }
+        void setnom(String nom)
+        {
+            this.nom=nom;
+        }
+        String getprenom()
+        {
+            return prenom;
+        }
+        void setprenom(String prenom)
+        {
+            this.prenom=prenom;
+        }
+        String getbranche()
+        {
+            return branche;
+        }
+        void setbranche(String branche)
+        {
+            this.branche=branche;
+        }
+        int getniveau()
+        {
+            return niveau;
+        }
+        void setniveau(int niveau)
+        {
+            this.niveau=niveau;
+        }
+
+    // methodes
+
+    void afficher()
             { 
                 //String str = String.valueOf(n);
                 //  String str = Integer.toString(n);
 
-              System.out.println("CIN =" + this.numero_identification + " nom = " + this.nom+ " prenom = " + this.prenom+ " niveau = " + this.niveau );   
+              System.out.println("************************************ \n CIN =" + this.numero_identification + "\n nom = " + this.nom+ " \n prenom = " + this.prenom+ " \n branche = " + this.branche+" \n niveau = " + this.niveau+" \n ************************************" );   
             }
-        boolean verification()
-        {
-           boolean verif;
-            verif= (this.niveau==2) ? true :false;
-            return verif;
-        }
-        void niveau()
-        { 
 
-        }
 
-        public static void main(String[] args)     
-    {
-        
-        Etudiant A=new Etudiant(11187567,"eya","dammak",2);
-        Etudiant B=new Etudiant(11145345,"bilel","feki",4); 
-        Etudiant C=new Etudiant(11134685,"farah","kallel",4); 
-        Etudiant D=new Etudiant(11178989,"fedi","aydi",3); 
-        Etudiant E=new Etudiant(11123434,"sirine","kammoun",2); 
-
-       if(A.verification()==true)
-       {
-        A.Afficher();
-       } 
-       if(B.verification()==true)
-       {
-        B.Afficher();
-        }
-         if(C.verification()==true)
-        {
-        C.Afficher();
-        } 
-        if(D.verification()==true)
-        {
-        D.Afficher();
-        }
-        if(E.verification()==true){
-        E.Afficher();       
-        }
-    }
 }
-        
-   
-    
 

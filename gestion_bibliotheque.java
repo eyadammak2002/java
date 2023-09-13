@@ -18,11 +18,13 @@ public class gestion_bibliotheque {
    
                 System.out.println("entrer le code :"); 
                 int code = Integer.parseInt(br.readLine());
+
                 // Taking string input
                 System.out.println("entrer le titre :"); 
                 String titre = br.readLine();
                 System.out.println("entrer le auteur :"); 
                 String auteur=br.readLine();
+                
                 // Taking float input
                 System.out.println("entrer le prix :"); 
                 float prix=Float.parseFloat(br.readLine());
