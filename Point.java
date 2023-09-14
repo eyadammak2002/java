@@ -22,6 +22,9 @@ class Point
     double distance( Point M )
     {
         double res;
+        //point M hiya fil programme principale B o il this hiya fil programme principale A
+        //this terja3 3ala A mouch 3ala B (A et B il programme principale) 
+        //fait réference à l'objet appelant ya3i A hiya ili 3aytet lil fonction this t3od 3ala A 
         res=Math.sqrt(((M.x-this.x)*(M.x-this.x))+((M.y-this.y)*(M.y-this.y)));
         return res;
     }
