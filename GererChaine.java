@@ -3,56 +3,64 @@ import java.io.InputStreamReader;
 
 public class GererChaine{
     
-    String s;
+   
+    GererChaine(){
+        System.out.println(" constructeur par defaut "  ); 
 
-    GererChaine(String s){
-         this.s=s;
     }
     
-    void concat(GererChaine m)throws Exception{
+    void concat(  )throws Exception{
+        String ch1 ;
+        String ch2;
         BufferedReader br = new BufferedReader(
             new InputStreamReader(System.in));
         System.out.println("donner une chaine  :"); 
-        this.s=br.readLine();
+        ch1=br.readLine();
         System.out.println("donner une chaine  :"); 
-        m.s=br.readLine();
-        System.out.println( this.s+m.s); 
+        ch2=br.readLine();
+        System.out.println("le résultat de concatination est "+ch1+ch2); 
  
     }
-    void index(GererChaine m)throws Exception{
+    void index()throws Exception{
+         String ch1 ;
+         String ch2;
         BufferedReader br = new BufferedReader(
             new InputStreamReader(System.in));
         System.out.println("donner une chaine  :"); 
-        this.s=br.readLine();
+        ch1=br.readLine();
         System.out.println("donner une chaine  :"); 
-        m.s=br.readLine();
-        System.out.println( "l'indice de premiere occurrence de "+this.s+" dans "+m.s+" est "+this.s.indexOf(m.s)); }
+        ch2=br.readLine();
+        System.out.println( "l'indice de premiere occurrence de "+ch2+" dans "+ch1+" est "+ch1.indexOf(ch2)); }
 
 
-    void StartWith(GererChaine m)throws Exception{
+    void StartWith( )throws Exception{
+        String ch1 ;
+        String ch2 ;
         BufferedReader br = new BufferedReader(
             new InputStreamReader(System.in));
         System.out.println("donner une chaine  :"); 
-        this.s=br.readLine();
+        ch1=br.readLine();
         System.out.println("donner une chaine  :"); 
-        m.s=br.readLine();
-        System.out.println(this.s+" se commence par "+m.s+":"+this.s.startsWith(m.s)); 
+        ch2=br.readLine();
+        System.out.println(ch1+" se commence par "+ch2+":"+ch1.startsWith(ch2)); 
     }
 
-    void EndWith(GererChaine m)throws Exception{
+    void EndWith()throws Exception{
+        String ch1 ;
+        String ch2 ;
         BufferedReader br = new BufferedReader(
             new InputStreamReader(System.in));
         System.out.println("donner une chaine  :"); 
-        this.s=br.readLine();
+        ch1=br.readLine();
         System.out.println("donner une chaine  :"); 
-        m.s=br.readLine();
-        System.out.println(this.s+" se commence par "+m.s+":"+this.s.endsWith(m.s)); 
+        ch2=br.readLine();
+        System.out.println(ch1+" se commence par "+ch2+":"+ch1.endsWith(ch2)); 
     }
 
 
 
    
-    void menu(GererChaine m)throws Exception{
+    void menu()throws Exception{
 
     int choix;
     do{
@@ -73,16 +81,16 @@ public class GererChaine{
             
             switch (choix) {
                 case 1:
-                    this.concat(m);  
+                    this.concat();  
                 break;
                 case 2:
-                    this.index(m);
+                    this.index();
                 break;
                 case 3:
-                    this.StartWith(m);         
+                    this.StartWith();         
                 break;
                 case 4:
-                    this.EndWith(m);         
+                    this.EndWith();         
                 break;
                
                 default: 
@@ -94,9 +102,9 @@ public class GererChaine{
 
     public static void main(String[] args)throws Exception     
     {
-        GererChaine a =new GererChaine("try with");
-        GererChaine b =new GererChaine("why");
-        a.menu(b);
+        GererChaine a =new GererChaine();
+       
+        a.menu();
 
     }
 }
