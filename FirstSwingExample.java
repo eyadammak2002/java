@@ -1,4 +1,6 @@
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
 public class FirstSwingExample {  
 public static void main(String[] args) {  
 JFrame f=new JFrame();//creating instance of JFrame  
