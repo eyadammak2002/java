@@ -21,7 +21,7 @@ abstract  class Employe {
     public abstract float calculerSalaire();
    
     public String getNom(){
-        return this.Category()+this.nom+" " +this.prenom ;
+        return this.Category()+this.nom+" "+this.prenom ;
     }
 
     public String Category() {
@@ -34,11 +34,13 @@ class Vente extends Employe {
   
   Vente(String nom,String prenom,int age,LocalDate date,float CA){
 	  super(nom,prenom,age,date);
-	  this.CA=CA
+	  this.CA=CA;
   }
-  float calculerSalaire(){
-  return CA*0.2+400;
-  }
+  @Override
+  public float calculerSalaire(){
+  return CA*20%+400;
+    }
+  @Override
   public String Category() {
   	return "Vente ";
   }
@@ -46,31 +48,35 @@ class Vente extends Employe {
 }
 
 
-class Représentation extends Employe {
+class Representation extends Employe {
   float CA;
   
-  Vente(String nom,String prenom,int age,LocalDate date,float CA){
+  Representation(String nom,String prenom,int age,LocalDate date,float CA){
 	  super(nom,prenom,age,date);
-	  this.CA=CA
+	  this.CA=CA;
   }
-  float calculerSalaire(){
-  return CA*0.2+800;
+  @Override
+  public float calculerSalaire(){
+  return CA*20%+800;
   }
+  @Override
   public String Category() {
 	  	return "Représentation ";
 	  }
   
 }
-class production extends Employe {
+class Production extends Employe {
 	  int UNPM;
 	  
-	  Vente(String nom,String prenom,int age,LocalDate date,int UNPM){
+	  Production(String nom,String prenom,int age,LocalDate date,int UNPM){
 		  super(nom,prenom,age,date);
-		  this.UNPM=UNPM
+		  this.UNPM=UNPM;
 	  }
-	  float calculerSalaire(){
+   @Override
+	  public float calculerSalaire(){
 	  return UNPM*5;
 	  }
+   @Override
 	  public String Category() {
 		  	return "production ";
 		  }
@@ -80,18 +86,26 @@ class production extends Employe {
 class Manutention extends Employe {
 	  int NbHeures;
 	  
-	  Vente(String nom,String prenom,int age,LocalDate date,int NbHeures){
+	  Manutention(String nom,String prenom,int age,LocalDate date,int NbHeures){
 		  super(nom,prenom,age,date);
-		  this.NbHeures=NbHeures
+		  this.NbHeures=NbHeures;
 	  }
-	  float calculerSalaire(){
+   @Override
+	  public float calculerSalaire(){
 	  return NbHeures*65;
 	  }
+   @Override
 	  public String Category() {
 		  	return "Manutention ";
 		  }
 	  
 	}
+
+class PrimeProduction{
+  float Prime;
+}
+
+
 
 
 
