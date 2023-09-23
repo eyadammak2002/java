@@ -1,3 +1,4 @@
+package jeux;
 
 
 import javax.swing.*;
