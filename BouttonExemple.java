@@ -1,7 +1,8 @@
+  import java.awt.event.*;  
+import javax.swing.*; 
 public class BouttonExemple {
-    import java.awt.event.*;  
-import javax.swing.*;    
-public class ButtonExample {  
+     
+
 public static void main(String[] args) {  
     JFrame f=new JFrame("Button Example");  
     final JTextField tf=new JTextField();  
@@ -20,4 +21,4 @@ public void actionPerformed(ActionEvent e){
 }  
 }  
     
-}
+
